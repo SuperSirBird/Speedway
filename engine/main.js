@@ -19,7 +19,7 @@ function gy(y) {
   return window.innerHeight/2-y;
 }
 function startscreen() {
-  ctx.fillStyle = "#e0f1ff";
+  ctx.fillStyle = "#effdff";
   ctx.fillRect(0,0,window.innerWidth,window.innerHeight)
   try {
     var img = document.getElementById("logo");
