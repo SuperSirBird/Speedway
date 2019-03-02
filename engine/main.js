@@ -18,7 +18,7 @@ function gx(x) {
 function gy(y) {
   return window.innerHeigh/2-y;
 }
-funtion startscreen() {
+function startscreen() {
   try {
     var img = document.getElementById("logo");
     ctx.drawImage(img, gx(0-204), 40,408,120);
