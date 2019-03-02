@@ -18,7 +18,7 @@ function step() {
   // Draw logo
   try {
     var img = document.getElementById("logo");
-    ctx.drawImage(img, 10, 10,408,200);
+    ctx.drawImage(img, 10, 10,408,120);
   } catch {}
   
   // Render
