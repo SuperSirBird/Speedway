@@ -20,7 +20,7 @@ function gy(y) {
 }
 function startscreen() {
   ctx.fillStyle = "#e0f1ff";
-  ctx.rect(0,0,window.innerWidth,window.innerHeight)
+  ctx.fillRect(0,0,window.innerWidth,window.innerHeight)
   try {
     var img = document.getElementById("logo");
     ctx.drawImage(img, gx(0-204), 80,408,120);
