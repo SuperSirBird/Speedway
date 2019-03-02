@@ -12,7 +12,7 @@ c.width  = window.innerWidth;
 c.height = window.innerHeight;
 
 function step() {
-  context.clearRect(0, 0, c.width, c.height);
+  ctx.clearRect(0, 0, c.width, c.height);
   
   // Draw logo
   var img = document.getElementById("logo");
