@@ -4,6 +4,8 @@ Engine by SuperSirBird
 
 */
 
+alert("running");
+
 // Setup Canvas
 
 var c = document.getElementById("myCanvas");
