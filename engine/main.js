@@ -25,7 +25,7 @@ function startscreen() {
     //bush
     var img = document.getElementById("bush");
     for (var i = 0;i<(window.innerWidth/80)+1;i++) {
-      ctx.drawImage(img, i*50, gy(-50),80,80);
+      ctx.drawImage(img, i*80, gy(-50),80,80);
     }
     
     var img = document.getElementById("logo");
