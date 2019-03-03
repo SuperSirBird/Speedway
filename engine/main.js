@@ -19,6 +19,9 @@ function gy(y) {
   return window.innerHeight/2-y;
 }
 function startscreen() {
+  var d = new Date();
+  var n = d.getTime();
+  
   ctx.fillStyle = "#effdff";
   ctx.fillRect(0,0,window.innerWidth,window.innerHeight)
   try {
@@ -49,9 +52,9 @@ function startscreen() {
 
     // text
     var img = document.getElementById("logo");
-    ctx.drawImage(img, gx(0-204), 30,408,120);
+    ctx.drawImage(img, gx(0-204), 30  - 10*Math.sin((n/1000)*360),408,120);
     var img = document.getElementById("pressz");
-    ctx.drawImage(img, gx(0-50), 260,100,50);
+    ctx.drawImage(img, gx(0-50), 260  - 10*Math.sin((n/1000)*360),100,50);
   } catch {}
 }
 
