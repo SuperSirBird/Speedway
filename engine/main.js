@@ -23,6 +23,10 @@ function startscreen() {
   ctx.fillRect(0,0,window.innerWidth,window.innerHeight)
   try {
     // Draw road
+    //road
+    ctx.fillStyle = "#e8d93a";
+    ctx.fillRect(0,gy(-80),window.innerWidth,20)
+    
     //bush
     var img = document.getElementById("bush");
     for (var i = 0;i<(window.innerWidth/70)+1;i++) {
@@ -34,6 +38,8 @@ function startscreen() {
       ctx.drawImage(img, (i*200)-35, gy(-10),80,80);
     }
     
+    
+    // text
     var img = document.getElementById("logo");
     ctx.drawImage(img, gx(0-204), 80,408,120);
     var img = document.getElementById("pressz");
