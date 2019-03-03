@@ -27,12 +27,12 @@ function startscreen() {
     ctx.fillStyle = "#4c4c4c";
     ctx.fillRect(0,gy(-80),window.innerWidth,500)
     ctx.fillStyle = "#f7f7f7";
-    ctx.fillRect(0,gy(-175),window.innerWidth,15)
+    ctx.fillRect(0,gy(-176),window.innerWidth,8)
     
     // road ridges
     ctx.fillStyle = "#4c4c4c";
     for (var i = 0;i<(window.innerWidth/300)+2;i++) {
-      ctx.fillRect(i*300,gy(-174),20,17)
+      ctx.fillRect(i*300,gy(-175),20,17)
     }
     
     
