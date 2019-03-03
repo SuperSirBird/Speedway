@@ -43,9 +43,9 @@ function startscreen() {
     
     // text
     var img = document.getElementById("logo");
-    ctx.drawImage(img, gx(0-204), 80,408,120);
+    ctx.drawImage(img, gx(0-204), 60,408,120);
     var img = document.getElementById("pressz");
-    ctx.drawImage(img, gx(0-50), 390,100,50);
+    ctx.drawImage(img, gx(0-50), 290,100,50);
   } catch {}
 }
 
