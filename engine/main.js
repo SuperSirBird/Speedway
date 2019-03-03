@@ -29,6 +29,13 @@ function startscreen() {
     ctx.fillStyle = "#f7f7f7";
     ctx.fillRect(0,gy(-175),window.innerWidth,15)
     
+    // road ridges
+    ctx.fillStyle = "#4c4c4c";
+    for (var i = 0;i<(window.innerWidth/200)+2;i++) {
+      ctx.fillRect(i*200,gy(-174),30,17)
+    }
+    
+    
     //bush
     var img = document.getElementById("bush");
     for (var i = 0;i<(window.innerWidth/70)+1;i++) {
@@ -39,8 +46,7 @@ function startscreen() {
     for (var i = 0;i<(window.innerWidth/200)+1;i++) {
       ctx.drawImage(img, (i*200)-35, gy(-10),80,80);
     }
-    
-    
+
     // text
     var img = document.getElementById("logo");
     ctx.drawImage(img, gx(0-204), 30,408,120);
