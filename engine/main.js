@@ -52,9 +52,9 @@ function startscreen() {
 
     // text
     var img = document.getElementById("logo");
-    ctx.drawImage(img, gx(0-204), 30  - 10*Math.sin(Math.PI/180*(((n/1000)*360)/3)),408,120);
+    ctx.drawImage(img, gx(0-204), 30  - 10*Math.sin(Math.PI/180*(((n/1000)*360)/2)),408,120);
     var img = document.getElementById("pressz");
-    ctx.drawImage(img, gx(0-50), 260  - 10*Math.sin(Math.PI/180*(60+((n/1000)*360)/3)),100,50);
+    ctx.drawImage(img, gx(0-50), 260  - 10*Math.sin(Math.PI/180*(-20+((n/1000)*360)/2)),100,50);
   } catch {}
 }
 
