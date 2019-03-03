@@ -24,8 +24,8 @@ function startscreen() {
   try {
     // Draw road
     //road
-    ctx.fillStyle = "#e8d93a";
-    ctx.fillRect(0,gy(-80),window.innerWidth,20)
+    ctx.fillStyle = "#4c4c4c";
+    ctx.fillRect(0,gy(-80),window.innerWidth,500)
     
     //bush
     var img = document.getElementById("bush");
