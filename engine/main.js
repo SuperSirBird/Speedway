@@ -26,7 +26,12 @@ function startscreen() {
     //bush
     var img = document.getElementById("bush");
     for (var i = 0;i<(window.innerWidth/70)+1;i++) {
-      ctx.drawImage(img, i*70, gy(-20),80,80);
+      ctx.drawImage(img, i*70, gy(-1),80,80);
+    }
+    //other
+    var img = document.getElementById("grassrock");
+    for (var i = 0;i<(window.innerWidth/200)+1;i++) {
+      ctx.drawImage(img, (i*70)-35, gy(-1),80,80);
     }
     
     var img = document.getElementById("logo");
