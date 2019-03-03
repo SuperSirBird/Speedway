@@ -22,16 +22,16 @@ function startscreen() {
   ctx.fillStyle = "#effdff";
   ctx.fillRect(0,0,window.innerWidth,window.innerHeight)
   try {
+    //bush
+    var img = document.getElementById("bush");
+    for (var i = 0;i<(window.innerWidth/80)+1;i++) {
+      ctx.drawImage(img, i*50, gy(-50),80,80);
+    }
+    
     var img = document.getElementById("logo");
     ctx.drawImage(img, gx(0-204), 80,408,120);
     var img = document.getElementById("pressz");
     ctx.drawImage(img, gx(0-50), 390,100,50);
-    //bush
-    var img = document.getElementById("bush");
-    ctx.drawImage(img, 0, gy(-50),50,50);
-    for (var i = 0;i<20;i++) {
-      ctx.drawImage(img, i*50, gy(-50),50,50);
-    }
   } catch {}
 }
 
