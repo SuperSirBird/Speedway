@@ -27,7 +27,7 @@ function startscreen() {
     ctx.fillStyle = "#4c4c4c";
     ctx.fillRect(0,gy(-80),window.innerWidth,500)
     ctx.fillStyle = "#f7f7f7";
-    ctx.fillRect(0,gy(-160),window.innerWidth,20)
+    ctx.fillRect(0,gy(-175),window.innerWidth,15)
     
     //bush
     var img = document.getElementById("bush");
