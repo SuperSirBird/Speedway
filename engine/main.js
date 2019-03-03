@@ -31,8 +31,8 @@ function startscreen() {
     
     // road ridges
     ctx.fillStyle = "#4c4c4c";
-    for (var i = 0;i<(window.innerWidth/200)+2;i++) {
-      ctx.fillRect(i*200,gy(-174),30,17)
+    for (var i = 0;i<(window.innerWidth/300)+2;i++) {
+      ctx.fillRect(i*300,gy(-174),20,17)
     }
     
     
