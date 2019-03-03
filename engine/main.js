@@ -26,6 +26,12 @@ function startscreen() {
     ctx.drawImage(img, gx(0-204), 80,408,120);
     var img = document.getElementById("pressz");
     ctx.drawImage(img, gx(0-50), 390,100,50);
+    //bush
+    var img = document.getElementById("bush");
+    ctx.drawImage(img, 0, gy(-50),50,50);
+    for (var i = 0;i<20;i++) {
+      ctx.drawImage(img, i*50, gy(-50),50,50);
+    }
   } catch {}
 }
 
