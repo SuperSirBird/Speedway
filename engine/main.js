@@ -22,10 +22,11 @@ function startscreen() {
   ctx.fillStyle = "#effdff";
   ctx.fillRect(0,0,window.innerWidth,window.innerHeight)
   try {
+    // Draw road
     //bush
     var img = document.getElementById("bush");
-    for (var i = 0;i<(window.innerWidth/80)+1;i++) {
-      ctx.drawImage(img, i*80, gy(-50),80,80);
+    for (var i = 0;i<(window.innerWidth/70)+1;i++) {
+      ctx.drawImage(img, i*70, gy(-20),80,80);
     }
     
     var img = document.getElementById("logo");
