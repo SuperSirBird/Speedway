@@ -31,7 +31,7 @@ function startscreen() {
     //other
     var img = document.getElementById("grassrock");
     for (var i = 0;i<(window.innerWidth/200)+1;i++) {
-      ctx.drawImage(img, (i*70)-35, gy(-1),80,80);
+      ctx.drawImage(img, (i*200)-35, gy(-10),80,80);
     }
     
     var img = document.getElementById("logo");
