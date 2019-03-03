@@ -25,7 +25,7 @@ function startscreen() {
   ctx.fillStyle = "#effdff";
   ctx.fillRect(0,0,window.innerWidth,window.innerHeight)
   ctx.fillStyle = "#e2fbff";
-  ctx.fillRect(0,0,window.innerWidth,window.innerHeight/3.5)
+  ctx.fillRect(0,0,window.innerWidth,window.innerHeight/3.3)
   
   try {
     // Draw road
