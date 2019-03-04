@@ -41,7 +41,6 @@ function gy(y) {
 function playg() {
   var d = new Date();
   var n = d.getTime();
-  mz = 100+(100*Math.sin(Math.PI/180*(((n/1000)*360)/2)));
   try {
   for (var i = roadx.length-1;i>1;i-=1) {
     if (roadz[i-1]-mz > 0) {
@@ -63,6 +62,20 @@ function playg() {
   
   var img = document.getElementById("car");
   ctx.drawImage(img, gx(0-70), gy(-200+35),140,70); // draw car
+}
+
+function deleteouts() {
+  for (var i = 0;i<roadx.length;i++) {
+    if (roadz[i]-mz < 0) {
+      roadz.splice[i,1];
+      roadx.splice[i,1];
+      roady.splice[i,1];
+      roadz.push(roadz[roadz.length-1]+10);
+      roady.push(20);
+      roadx.push(0);
+    }
+  }
+    
 }
 
 function startscreen() {
@@ -110,10 +123,11 @@ function startscreen() {
 
 function step() {
   ctx.clearRect(0, 0, c.width, c.height);
-  
+  mz += 1;
   // Render
   //startscreen();
   playg();
+  deleteouts();
   
   
   window.requestAnimationFrame(step);
