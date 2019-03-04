@@ -166,10 +166,11 @@ function startscreen() {
 
 function step() {
   ctx.clearRect(0, 0, c.width, c.height);
-  mz += 1;
+  mz += 2;
   // Render
   //startscreen();
   playg();
+  controls();
   deleteouts();
   
   
