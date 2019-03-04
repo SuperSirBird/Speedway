@@ -190,10 +190,10 @@ function step() {
   ctx.clearRect(0, 0, c.width, c.height);
   mz += 2;
   // Render
-  startscreen();
-  //deleteouts();
-  //playg();
-  //controls();
+  //startscreen();
+  deleteouts();
+  playg();
+  controls();
   
   window.requestAnimationFrame(step);
 }
