@@ -36,11 +36,11 @@ function controls() {
   xspeed = xspeed/1.1;
   if (keys[39]) { //right
     mx += xspeed
-    xspeed += 1;
+    xspeed += 2;
   } 
   if (keys[37]) { //left
     mx += xspeed
-    xspeed += -1;
+    xspeed += -2;
   } 
 }
 
