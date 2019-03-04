@@ -109,8 +109,8 @@ function step() {
   ctx.clearRect(0, 0, c.width, c.height);
   
   // Render
-  //startscreen();
-  playg();
+  startscreen();
+  //playg();
   
   
   window.requestAnimationFrame(step);
