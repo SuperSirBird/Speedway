@@ -95,7 +95,7 @@ function deleteouts() {
       roady.splice(i,1);
       roadz.push(roadz[roadz.length-1]+10);
       roady.push(0);
-      roadx.push(100*Math.sin(Math.PI/180*(((roadz[roadz.length-1]/10)*360)/20)));
+      roadx.push(250*Math.sin(Math.PI/180*(((roadz[roadz.length-1]/10)*360)/31)));
       i-=1;
     }
   }
