@@ -34,17 +34,17 @@ function gy(y) {
 
 function playg() {
   
-  for (var i = roadx.length-1;i>1;i++) {
+  for (var i = roadx.length-1;i>1;i-=1) {
     if (roadz[i-1]-mz > 0) {
-      perspec(roadx[i],roady[i],roadz[i])
+      perspec(roadx[i],roady[i],roadz[i]);
       var x1 = x;
       var y1 = y;
-      perspec(roadx[i-1],roady[i-1],roadz[i-1])
+      perspec(roadx[i-1],roady[i-1],roadz[i-1]);
       var x2 = x;
       var y2 = y;
       
       ctx.fillStyle = "#effdff";
-      ctx.fillRect(0,gy(y1),window.innerWidth,gy(y1)-gy(y2))
+      ctx.fillRect(0,gy(y1),window.innerWidth,gy(y1)-gy(y2));
       
       
     }
