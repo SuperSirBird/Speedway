@@ -18,6 +18,12 @@ function gx(x) {
 function gy(y) {
   return window.innerHeight/2-y;
 }
+
+function play() {
+  var img = document.getElementById("car");
+  ctx.drawImage(img, gx(0-204), gy(-40+60)),408,120);
+}
+
 function startscreen() {
   var d = new Date();
   var n = d.getTime();
@@ -65,7 +71,8 @@ function step() {
   ctx.clearRect(0, 0, c.width, c.height);
   
   // Render
-  startscreen();
+  //startscreen();
+  play();
   
   
   window.requestAnimationFrame(step);
