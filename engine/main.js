@@ -74,6 +74,7 @@ function playg() {
       var rx2 = x;
       var ry2 = y;
       // draw
+      try {
       ctx.fillStyle = '#5b5b5b';
       
       ctx.beginPath();
@@ -81,7 +82,8 @@ function playg() {
       ctx.lineTo(gx(lx2), gy(ly2));
       ctx.lineTo(gx(rx2), gy(ry2)));
       ctx.lineTo(gx(rx1), gy(ry1)));
-      ctx.fill();
+      ctx.closePath();
+      ctx.fill();} catch(err) {alert(err)}
       
     }
   }
