@@ -63,8 +63,21 @@ function drawcar() {
   my = my + ((roady[4]+(((roady[1]-roady[0])/10)*(mz%10)))-my)/5
   ycar = ycar + ((roady[4]+(((roady[5]-roady[4])/10)*((mz+40)%10)))-ycar)/5;
   perspec(0,0-200+ycar-my,40);
+  
+  //draw
+  ctx.strokeStyle = 'rgba(0,0,0,100)'
+  ctx.beginPath();
+  ctx.lineWidth = 40;
+  ctx.lineCap = "round";
+  ctx.moveTo(gx(x-70), gy(y));
+  ctx.lineTo(gx(x+70), gy(y));
+  ctx.stroke();
+  ctx.lineWidth = 0;
+  
   var img = document.getElementById("car");
   ctx.drawImage(img, gx(x-70), gy(y+70),140,70); // draw car
+  
+  
 }
 
 function playg() {
