@@ -43,7 +43,7 @@ function playg() {
       perspec(roadx[i-1],roady[i-1]-60,roadz[i-1]);
       var x2 = x;
       var y2 = y;
-      if (roadx[i] % 20 === 0) {
+      if (roadz[i] % 20 === 0) {
         ctx.fillStyle = "#4ebc00";
         ctx.fillRect(0,gy(y1),window.innerWidth,gy(y1)-gy(y2));
       }
