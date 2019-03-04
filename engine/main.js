@@ -94,8 +94,8 @@ function deleteouts() {
       roadx.splice(i,1);
       roady.splice(i,1);
       roadz.push(roadz[roadz.length-1]+10);
-      roady.push(20);
-      roadx.push(0);
+      roady.push(0);
+      roadx.push(100*Math.sin(Math.PI/180*(((roadz[roadz.length-1]/10)*360)/20)));
       i-=1;
     }
   }
