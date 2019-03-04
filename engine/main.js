@@ -74,7 +74,6 @@ function deleteouts() {
       roadz.push(roadz[roadz.length-1]+10);
       roady.push(20);
       roadx.push(0);
-      i-=1;
     }
   }
     
