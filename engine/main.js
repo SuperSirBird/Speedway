@@ -127,9 +127,9 @@ function step() {
   ctx.clearRect(0, 0, c.width, c.height);
   mz += 1;
   // Render
-  //startscreen();
-  playg();
-  deleteouts();
+  startscreen();
+  //playg();
+  //deleteouts();
   
   
   window.requestAnimationFrame(step);
