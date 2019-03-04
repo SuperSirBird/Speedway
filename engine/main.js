@@ -12,9 +12,14 @@ c.width  = window.innerWidth;
 c.height = window.innerHeight;
 ctx.imageSmoothingEnabled = false;
 
-var roadx = [0,0,0,0,0,0,0,0]
-var roady = [0,0,0,0,0,0,0,0]
-var roadz = [10,20,30,40,50,60,70,80]
+var roadx = [0]
+var roady = [0]
+var roadz = [0]
+for (var i = 10;i<200;i+=10) {
+  roadx.push(0);
+  roady.push(0);
+  roadz.push(10+roadz[(i-10)/10])
+}
 var x;
 var y;
 var z;
