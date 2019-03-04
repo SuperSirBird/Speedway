@@ -58,10 +58,8 @@ function gy(y) {
 }
 
 function drawcar() {
-  perspec(0,0-200,20)
-  
   var ycar = roady[2]+(((roady[3]-roady[2])/10)*((mz+20)%10));
-  
+  perspec(0,0-200+ycar,20)  
   var img = document.getElementById("car");
   ctx.drawImage(img, gx(x-70), gy(y+70),140,70); // draw car
 }
