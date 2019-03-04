@@ -57,6 +57,13 @@ function gy(y) {
   return window.innerHeight/2-y;
 }
 
+function drawcar() {
+  perspec(0,0-60,20)
+  
+  var img = document.getElementById("car");
+  ctx.drawImage(img, gx(x-70), gy(y+70),140,70); // draw car
+}
+
 function playg() {
   var d = new Date();
   var n = d.getTime();
@@ -101,8 +108,7 @@ function playg() {
   }
   } catch(err) {alert(err)}
   
-  var img = document.getElementById("car");
-  ctx.drawImage(img, gx(0-70), gy(-200+35),140,70); // draw car
+  drawcar();
 }
 
 function deleteouts() {
