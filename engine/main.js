@@ -67,7 +67,7 @@ function drawcar() {
   //draw
   ctx.strokeStyle = 'rgba(0,0,0,0.4)'
   ctx.beginPath();
-  ctx.lineWidth = 40;
+  ctx.lineWidth = 30;
   ctx.lineCap = "round";
   ctx.moveTo(gx(x-60), gy(y));
   ctx.lineTo(gx(x+60), gy(y));
