@@ -13,6 +13,7 @@ c.height = window.innerHeight;
 ctx.imageSmoothingEnabled = false;
 
 var roadx = [0,0,0,0,0,0,0,0]
+var roady = [0,0,0,0,0,0,0,0]
 var roadz = [0,10,20,30,40,50,60,70]
 var x;
 var y;
