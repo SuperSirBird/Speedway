@@ -21,7 +21,7 @@ function gy(y) {
 
 function playg() {
   var img = document.getElementById("car");
-  ctx.drawImage(img, gx(0-104), gy(-40+35),208,70);
+  ctx.drawImage(img, gx(0-75), gy(-40+35),150,70);
 }
 
 function startscreen() {
