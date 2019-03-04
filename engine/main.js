@@ -17,6 +17,7 @@ var roadz = [0,10,20,30,40,50,60,70]
 var x;
 var y;
 var z;
+var mz = 0;
 
 function perspec(x_,y_,z_) {
   x = x_/(z_/40);
@@ -33,8 +34,20 @@ function gy(y) {
 
 function playg() {
   
-  for (i = 0;i<roadx.length-1;i++) {
-    
+  for (var i = roadx.length-1;i>1;i++) {
+    if (roadz[i-1]-mz > 0) {
+      perspec(roadx[i],roady[i],roadz[i])
+      var x1 = x;
+      var y1 = y;
+      perspec(roadx[i-1],roady[i-1],roadz[i-1])
+      var x2 = x;
+      var y2 = y;
+      
+      ctx.fillStyle = "#effdff";
+      ctx.fillRect(0,gy(y1),window.innerWidth,gy(y1)-gy(y2))
+      
+      
+    }
   }
   
   var img = document.getElementById("car");
@@ -88,8 +101,8 @@ function step() {
   ctx.clearRect(0, 0, c.width, c.height);
   
   // Render
-  startscreen();
-  //playg();
+  //startscreen();
+  playg();
   
   
   window.requestAnimationFrame(step);
