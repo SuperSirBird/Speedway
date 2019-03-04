@@ -14,7 +14,7 @@ ctx.imageSmoothingEnabled = false;
 
 var roadx = [0,0,0,0,0,0,0,0]
 var roady = [0,0,0,0,0,0,0,0]
-var roadz = [0,10,20,30,40,50,60,70]
+var roadz = [10,20,30,40,50,60,70,80]
 var x;
 var y;
 var z;
@@ -47,8 +47,7 @@ function playg() {
       if (roadz[i] % 20 === 10) {
         ctx.fillStyle = 'rgb(155, 165,50)';
       }
-      alert("yeet")
-      ctx.fillRect(0,gy(y1),window.innerWidth,gy(y1)-gy(y2));
+      ctx.fillRect(0,gy(y1),window.innerWidth,gy(y1-y2));
       
     }
   }
