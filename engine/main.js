@@ -44,6 +44,7 @@ function playg() {
   try {
   for (var i = roadx.length-1;i>1;i-=1) {
     if (roadz[i-1]-mz > 0) {
+      // fill grass
       perspec(roadx[i],roady[i]-200,roadz[i]-mz);
       var x1 = x;
       var y1 = y;
@@ -55,6 +56,32 @@ function playg() {
         ctx.fillStyle = 'rgb(155, 165,50)';
       }
       ctx.fillRect(0,gy(y1),window.innerWidth,y1-y2);
+      
+      // fill road
+      
+      // left road
+      perspec(roadx[i]-600,roady[i]-200,roadz[i]-mz);
+      var lx1 = x;
+      var ly1 = y;
+      perspec(roadx[i-1]-600,roady[i-1]-200,roadz[i-1]-mz);
+      var lx2 = x;
+      var ly2 = y;
+      // right road
+      perspec(roadx[i]+600,roady[i]-200,roadz[i]-mz);
+      var rx1 = x;
+      var ry1 = y;
+      perspec(roadx[i-1]+600,roady[i-1]-200,roadz[i-1]-mz);
+      var rx2 = x;
+      var ry2 = y;
+      // draw
+      ctx.fillStyle = '#5b5b5b';
+      
+      ctx.beginPath();
+      ctx.moveTo(gx(lx1), gy(ly1));
+      ctx.lineTo(gx(lx2), gy(ly2));
+      ctx.lineTo(gx(rx2), gy(ry2)));
+      ctx.lineTo(gx(rx1), gy(ry1)));
+      ctx.fill();
       
     }
   }
