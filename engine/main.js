@@ -33,7 +33,7 @@ function gy(y) {
 }
 
 function playg() {
-  
+  try {
   for (var i = roadx.length-1;i>1;i-=1) {
     if (roadz[i-1]-mz > 0) {
       perspec(roadx[i],roady[i]-60,roadz[i]);
@@ -49,6 +49,7 @@ function playg() {
       
     }
   }
+  } catch(err) {alert(err)}
   
   var img = document.getElementById("car");
   ctx.drawImage(img, gx(0-75), gy(-40+35),150,70);
