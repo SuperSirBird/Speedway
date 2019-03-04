@@ -26,8 +26,8 @@ var z;
 var mz = 0;
 
 function perspec(x_,y_,z_) {
-  x = x_/(z_/40);
-  y = y_/(z_/40);
+  x = x_/(1+z_/40);
+  y = y_/(1+z_/40);
   z = z_;
 }
 
