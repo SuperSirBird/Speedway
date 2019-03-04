@@ -39,6 +39,9 @@ function gy(y) {
 }
 
 function playg() {
+  var d = new Date();
+  var n = d.getTime();
+  mz = 100+(100*Math.sin(Math.PI/180*(((n/1000)*360)/2)));
   try {
   for (var i = roadx.length-1;i>1;i-=1) {
     if (roadz[i]-mz > 0) {
