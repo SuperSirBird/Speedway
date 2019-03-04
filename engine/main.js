@@ -37,10 +37,10 @@ function playg() {
   try {
   for (var i = roadx.length-1;i>1;i-=1) {
     if (roadz[i-1]-mz > 0) {
-      perspec(roadx[i],roady[i]-60,roadz[i]);
+      perspec(roadx[i],roady[i]-200,roadz[i]);
       var x1 = x;
       var y1 = y;
-      perspec(roadx[i-1],roady[i-1]-60,roadz[i-1]);
+      perspec(roadx[i-1],roady[i-1]-200,roadz[i-1]);
       var x2 = x;
       var y2 = y;
       if (roadz[i] % 20 === 0) {
