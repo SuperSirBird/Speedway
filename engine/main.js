@@ -58,8 +58,8 @@ function gy(y) {
 }
 
 function drawcar() {
-  var ycar = roady[2]+(((roady[3]-roady[2])/10)*((mz+20)%10));
-  perspec(0,0-200+ycar,20)  
+  var ycar = roady[4]+(((roady[5]-roady[4])/10)*((mz+20)%10));
+  perspec(0,0-200+ycar,40);
   var img = document.getElementById("car");
   ctx.drawImage(img, gx(x-70), gy(y+70),140,70); // draw car
 }
@@ -175,10 +175,9 @@ function step() {
   mz += 2;
   // Render
   //startscreen();
+  deleteouts();
   playg();
   controls();
-  deleteouts();
-  
   
   window.requestAnimationFrame(step);
 }
