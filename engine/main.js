@@ -58,7 +58,6 @@ function playg() {
   }
   } catch(err) {alert(err)}
   
-  ctx.ellipse(gx(0), gx(-200), 150, 70)
   var img = document.getElementById("car");
   ctx.drawImage(img, gx(0-75), gy(-200+35),150,70); // draw car
 }
