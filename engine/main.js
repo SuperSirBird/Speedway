@@ -68,12 +68,15 @@ function deleteouts() {
   var oldlen = roadx.length;
   for (var i = 0;i<oldlen;i++) {
     if (roadz[i]-mz < 0) {
+      alert(roadx.length)
       roadz.splice[i,1];
       roadx.splice[i,1];
       roady.splice[i,1];
+      alert(roadx.length)
       roadz.push(roadz[roadz.length-1]+10);
       roady.push(20);
       roadx.push(0);
+      alert(roadx.length)
       i-=1;
     }
   }
