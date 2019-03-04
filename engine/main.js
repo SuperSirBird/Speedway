@@ -43,7 +43,7 @@ function playg() {
       perspec(roadx[i-1],roady[i-1]-200,roadz[i-1]);
       var x2 = x;
       var y2 = y;
-      //ctx.fillStyle = 'rgba(255, 165, ' + roadz[i] + ',50)';
+      ctx.fillStyle = 'rgba(255, 165, ' + roadz[i] + ',50)';
       ctx.fillRect(0,gy(y1),window.innerWidth,gy(y1)-gy(y2));
       
     }
@@ -101,8 +101,8 @@ function step() {
   ctx.clearRect(0, 0, c.width, c.height);
   
   // Render
-  startscreen();
-  //playg();
+  //startscreen();
+  playg();
   
   
   window.requestAnimationFrame(step);
