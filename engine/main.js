@@ -58,7 +58,9 @@ function gy(y) {
 }
 
 function drawcar() {
-  perspec(0,0-60,20)
+  perspec(0,0-200,20)
+  
+  var ycar = roady[2]+(((roady[3]-roady[2])/10)*((mz+20)%10));
   
   var img = document.getElementById("car");
   ctx.drawImage(img, gx(x-70), gy(y+70),140,70); // draw car
@@ -119,7 +121,7 @@ function deleteouts() {
       roadx.splice(i,1);
       roady.splice(i,1);
       roadz.push(roadz[roadz.length-1]+10);
-      roady.push(0);
+      roady.push(150*Math.sin(Math.PI/180*(((roadz[roadz.length-1]/10)*360)/31)));
       roadx.push(250*Math.sin(Math.PI/180*(((roadz[roadz.length-1]/10)*360)/31)));
       i-=1;
     }
