@@ -26,8 +26,8 @@ var z;
 var mz = 0;
 
 function perspec(x_,y_,z_) {
-  x = x_/(0.2+z_/40);
-  y = y_/(0.2+z_/40);
+  x = x_/(0.1+z_/40);
+  y = y_/(0.1+z_/40);
   z = z_;
 }
 
@@ -44,7 +44,7 @@ function playg() {
   mz = 100+(100*Math.sin(Math.PI/180*(((n/1000)*360)/2)));
   try {
   for (var i = roadx.length-1;i>1;i-=1) {
-    if (roadz[i]-mz > 0) {
+    if (roadz[i-1]-mz > 0) {
       perspec(roadx[i],roady[i]-200,roadz[i]-mz);
       var x1 = x;
       var y1 = y;
