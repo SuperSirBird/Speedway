@@ -65,7 +65,8 @@ function playg() {
 }
 
 function deleteouts() {
-  for (var i = 0;i<roadx.length;i++) {
+  var oldlen = roadx.length;
+  for (var i = 0;i<oldlen;i++) {
     if (roadz[i]-mz < 0) {
       roadz.splice[i,1];
       roadx.splice[i,1];
