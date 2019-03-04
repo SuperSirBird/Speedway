@@ -36,18 +36,15 @@ function gy(y) {
 function playg() {
   try {
   for (var i = roadx.length-1;i>1;i-=1) {
-    if (roadz[i-1]-mz > 0) {
+    if (roadz[i]-mz > 0) {
       perspec(roadx[i],roady[i]-200,roadz[i]);
       var x1 = x;
       var y1 = y;
       perspec(roadx[i-1],roady[i-1]-200,roadz[i-1]);
       var x2 = x;
       var y2 = y;
-      if (roadz[i] % 40 === 0) {
-        ctx.fillStyle = "#4ebc00";
-        ctx.fillRect(0,gy(y1),window.innerWidth,gy(y1)-gy(y2));
-      }
-      
+      ctx.fillStyle = 'rgb(255, 165, ' + roadz[i] + ')';
+      ctx.fillRect(0,gy(y1),window.innerWidth,gy(y1)-gy(y2));
       
     }
   }
