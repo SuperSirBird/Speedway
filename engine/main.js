@@ -47,7 +47,7 @@ function playg() {
       if (roadz[i] % 20 === 10) {
         ctx.fillStyle = 'rgb(155, 165,50)';
       }
-      ctx.fillRect(0,gy(y1),window.innerWidth,gy(y1-y2));
+      ctx.fillRect(0,gy(y1),window.innerWidth,y1-y2);
       
     }
   }
