@@ -65,12 +65,12 @@ function drawcar() {
   perspec(0,0-200+ycar-my,40);
   
   //draw
-  ctx.strokeStyle = 'rgba(0,0,0,200)'
+  ctx.strokeStyle = 'rgba(0,0,0,0.4)'
   ctx.beginPath();
   ctx.lineWidth = 40;
   ctx.lineCap = "round";
-  ctx.moveTo(gx(x-70), gy(y));
-  ctx.lineTo(gx(x+70), gy(y));
+  ctx.moveTo(gx(x-60), gy(y));
+  ctx.lineTo(gx(x+60), gy(y));
   ctx.stroke();
   ctx.lineWidth = 0;
   
