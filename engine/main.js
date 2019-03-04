@@ -82,7 +82,6 @@ function playg() {
       ctx.lineTo(gx(lx2), gy(ly2));
       ctx.lineTo(gx(rx2), gy(ry2)));
       ctx.lineTo(gx(rx1), gy(ry1)));
-      ctx.closePath();
       ctx.fill();} catch(err) {alert(err)}
       
     }
