@@ -14,8 +14,15 @@ ctx.imageSmoothingEnabled = false;
 
 var roadx = [0,0,0,0,0,0,0,0]
 var roadz = [0,10,20,30,40,50,60,70]
+var x;
+var y;
+var z;
 
-function perspec(x,y,z) {}
+function perspec(x_,y_,z_) {
+  x = x_/(z_/40);
+  y = y_/(z_/40);
+  z = z_;
+}
 
 function gx(x) {
   return window.innerWidth/2+x;
@@ -25,6 +32,11 @@ function gy(y) {
 }
 
 function playg() {
+  
+  for (i = 0;i<roadx.length-1;i++) {
+    
+  }
+  
   var img = document.getElementById("car");
   ctx.drawImage(img, gx(0-75), gy(-40+35),150,70);
 }
