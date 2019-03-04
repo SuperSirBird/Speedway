@@ -32,6 +32,7 @@ var y;
 var z;
 var mz = 0;
 var mx = 0;
+var my = 0;
 var xspeed = 0;
 
 function controls() {
@@ -60,8 +61,9 @@ function gy(y) {
 }
 
 function drawcar() {
-  ycar = ycar + ((roady[4]+(((roady[5]-roady[4])/10)*((mz+20)%10)))-ycar)/5;
-  perspec(0,0-200+ycar,40);
+  my = my + ((roady[4]+(((roady[1]-roady[0])/10)*(mz%10)))-my)/5
+  ycar = ycar + ((roady[4]+(((roady[5]-roady[4])/10)*((mz+40)%10)))-ycar)/5;
+  perspec(0,0-200+ycar-my,40);
   var img = document.getElementById("car");
   ctx.drawImage(img, gx(x-70), gy(y+70),140,70); // draw car
 }
@@ -73,10 +75,10 @@ function playg() {
   for (var i = roadx.length-1;i>1;i-=1) {
     if (roadz[i-1]-mz > 0) {
       // fill grass
-      perspec(roadx[i]-mx,roady[i]-200,roadz[i]-mz);
+      perspec(roadx[i]-mx,roady[i]-200-my,roadz[i]-mz);
       var x1 = x;
       var y1 = y;
-      perspec(roadx[i-1]-mx,roady[i-1]-200,roadz[i-1]-mz);
+      perspec(roadx[i-1]-mx,roady[i-1]-200-my,roadz[i-1]-mz);
       var x2 = x;
       var y2 = y;
       ctx.fillStyle = 'rgb(255, 165,50)';
@@ -88,17 +90,17 @@ function playg() {
       // fill road
       
       // left road
-      perspec(roadx[i]-600-mx,roady[i]-200,roadz[i]-mz);
+      perspec(roadx[i]-600-mx,roady[i]-200-my,roadz[i]-mz);
       var lx1 = x;
       var ly1 = y;
-      perspec(roadx[i-1]-600-mx,roady[i-1]-200,roadz[i-1]-mz);
+      perspec(roadx[i-1]-600-mx,roady[i-1]-200-my,roadz[i-1]-mz);
       var lx2 = x;
       var ly2 = y;
       // right road
-      perspec(roadx[i]+600-mx,roady[i]-200,roadz[i]-mz);
+      perspec(roadx[i]+600-mx,roady[i]-200-my,roadz[i]-mz);
       var rx1 = x;
       var ry1 = y;
-      perspec(roadx[i-1]+600-mx,roady[i-1]-200,roadz[i-1]-mz);
+      perspec(roadx[i-1]+600-mx,roady[i-1]-200-my,roadz[i-1]-mz);
       var rx2 = x;
       var ry2 = y;
       // draw
