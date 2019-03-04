@@ -12,6 +12,11 @@ c.width  = window.innerWidth;
 c.height = window.innerHeight;
 ctx.imageSmoothingEnabled = false;
 
+var roadx = [0,0,0,0,0,0,0,0]
+var roadz = [0,10,20,30,40,50,60,70]
+
+function perspec(x,y,z) {}
+
 function gx(x) {
   return window.innerWidth/2+x;
 }
