@@ -19,7 +19,7 @@ function gy(y) {
   return window.innerHeight/2-y;
 }
 
-function play() {
+function playg() {
   var img = document.getElementById("car");
   ctx.drawImage(img, gx(0-204), gy(-40+60)),408,120);
 }
@@ -72,7 +72,7 @@ function step() {
   
   // Render
   //startscreen();
-  play();
+  playg();
   
   
   window.requestAnimationFrame(step);
