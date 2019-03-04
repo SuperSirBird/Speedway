@@ -20,6 +20,8 @@ window.onkeydown = function(e) { keys[e.keyCode] = true; }
 var roadx = [0]
 var roady = [0]
 var roadz = [0]
+var ycar = 0;
+
 for (var i = 10;i<510;i+=10) {
   roadx.push(0);
   roady.push(0);
@@ -58,7 +60,7 @@ function gy(y) {
 }
 
 function drawcar() {
-  var ycar = roady[4]+(((roady[5]-roady[4])/10)*((mz+20)%10));
+  ycar = ycar + ((roady[4]+(((roady[5]-roady[4])/10)*((mz+20)%10)))-ycar)/5;
   perspec(0,0-200+ycar,40);
   var img = document.getElementById("car");
   ctx.drawImage(img, gx(x-70), gy(y+70),140,70); // draw car
