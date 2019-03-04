@@ -59,7 +59,7 @@ function playg() {
   } catch(err) {alert(err)}
   
   var img = document.getElementById("car");
-  ctx.drawImage(img, gx(0-75), gy(-200+35),150,70); // draw car
+  ctx.drawImage(img, gx(0-70), gy(-200+35),140,70); // draw car
 }
 
 function startscreen() {
