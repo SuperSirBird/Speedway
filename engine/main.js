@@ -48,8 +48,8 @@ function controls() {
 }
 
 function perspec(x_,y_,z_) {
-  x = x_/(0.1+z_/40);
-  y = y_/(0.1+z_/40);
+  x = x_/(z_/40);
+  y = y_/(z_/40);
   z = z_;
 }
 
