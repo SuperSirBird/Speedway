@@ -74,15 +74,9 @@ function playg() {
       var rx2 = x;
       var ry2 = y;
       // draw
-      try {
       ctx.fillStyle = '#5b5b5b';
       
-      ctx.beginPath();
-      ctx.moveTo(gx(lx1), gy(ly1));
-      ctx.lineTo(gx(lx2), gy(ly2));
-      ctx.lineTo(gx(rx2), gy(ry2)));
-      ctx.lineTo(gx(rx1), gy(ry1)));
-      ctx.fill();} catch(err) {alert(err)}
+      ctx.fillRect(gx(lx1),gy(ly1),rx1-lx1,ly1-ly2);
       
     }
   }
