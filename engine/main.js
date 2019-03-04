@@ -33,14 +33,14 @@ var mx = 0;
 var xspeed = 0;
 
 function controls() {
-  xspeed = xspeed/1.8;
+  xspeed = xspeed/1.3;
   if (keys[39]) { //right
     mx += xspeed
-    xspeed += 10;
+    xspeed += 2;
   } 
   if (keys[37]) { //left
     mx += xspeed
-    xspeed += -10;
+    xspeed += -2;
   } 
 }
 
