@@ -234,7 +234,7 @@ function roadgen() {
       curve+=(curvegoal/Math.abs(curvegoal))/20;
       if (Math.abs(curve) > Math.abs(curvegoal)) {curvedir=0; cooldown2=0}
     } else {
-      curve-=(curvegoal/Math.abs(curvegoal))/35;
+      curve-=(curvegoal/Math.abs(curvegoal))/45;
       if (curvegoal > 0 && curve < 0) {
         cooldown=0;
         curvegoal = -25;
