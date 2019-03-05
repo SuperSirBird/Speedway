@@ -129,7 +129,7 @@ function playg() {
       var x2 = x;
       var y2 = y;
       
-      var img = document.getElementById("fance");
+      var img = document.getElementById("fence");
       ctx.drawImage(img, gx(x1-(x2/2)), gx(y1+y2),x2,y2); // draw fence
       
     }
