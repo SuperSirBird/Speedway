@@ -122,10 +122,10 @@ function playg() {
       
       // fence
       
-      perspec(roadx[i]+620-mx,roady[i]-200-my,roadz[i]-mz);
+      perspec(roadx[i]+650-mx,roady[i]-200-my,roadz[i]-mz);
       var x1 = x;
       var y1 = y;
-      perspec(150,130,roadz[i]-mz);
+      perspec(130,100,roadz[i]-mz);
       var x2 = x;
       var y2 = y;
       
