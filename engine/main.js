@@ -225,10 +225,10 @@ function roadgen() {
   xcurve+=curve;
   
   if (curvedir === 1) {
-    curve+=(curvegoal/Math.abs(curvegoal))/7;
+    curve+=(curvegoal/Math.abs(curvegoal))/10;
     if (Math.abs(curve) > Math.abs(curvegoal)) {curvedir=0}
   } else {
-    curve-=(curvegoal/Math.abs(curvegoal))/7;
+    curve-=(curvegoal/Math.abs(curvegoal))/10;
     if (curvegoal > 0 && curve < 0) {
       curvegoal = -30;
       curve = 0
