@@ -14,7 +14,7 @@ ctx.imageSmoothingEnabled = false;
 
 var curve = 0;
 var xcurve = 0;
-var curvegoal = 75;
+var curvegoal = 45;
 var curvedir = 1;
 var cooldown = 40;
 var cooldown2 = 100;
@@ -231,19 +231,19 @@ function roadgen() {
     xcurve+=curve;
   
     if (curvedir === 1) {
-      curve+=(curvegoal/Math.abs(curvegoal))/10;
+      curve+=(curvegoal/Math.abs(curvegoal))/7;
       if (Math.abs(curve) > Math.abs(curvegoal)) {curvedir=0; cooldown2=0}
     } else {
-      curve-=(curvegoal/Math.abs(curvegoal))/10;
+      curve-=(curvegoal/Math.abs(curvegoal))/7;
       if (curvegoal > 0 && curve < 0) {
         cooldown=0;
-        curvegoal = -75;
+        curvegoal = -45;
         curve = 0
         curvedir = 1;
       }
       if (curvegoal < 0 && curve > 0) {
         cooldown=0;
-        curvegoal = 75;
+        curvegoal = 45;
         curve = 0;
         curvedir = 1;
       }
