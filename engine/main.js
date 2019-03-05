@@ -227,7 +227,7 @@ function roadgen() {
   cooldown+=1;
   cooldown2+=1;
   if (cooldown2 < 100) {xcurve+=curve;}
-  if (cooldown > 200 && cooldown2 > 100) {
+  if (cooldown > 500 && cooldown2 > 100) {
     xcurve+=curve;
   
     if (curvedir === 1) {
