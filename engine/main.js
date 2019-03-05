@@ -45,10 +45,10 @@ var xspeed = 0;
 function controls() {
   xspeed = xspeed/1.1;
   if (keys[39]) { //right
-    xspeed += 3;
+    xspeed += 3.4;
   } 
   if (keys[37]) { //left
-    xspeed += -3;
+    xspeed += -3.4;
   } 
   mx += xspeed
 }
