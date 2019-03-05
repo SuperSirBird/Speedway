@@ -224,7 +224,7 @@ function startscreen() {
 
 function roadgen() {
   cooldown+=1;
-  if (cooldown > 50) {
+  if (cooldown > 500) {
     xcurve+=curve;
   
     if (curvedir === 1) {
