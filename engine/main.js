@@ -130,7 +130,7 @@ function playg() {
       var y2 = y;
       
       var img = document.getElementById("fence");
-      ctx.drawImage(img, gx(x1-(x2/2)), gx(y1+y2),x2,y2); // draw fence
+      ctx.drawImage(img, gx(x1-(x2/2)), gy(y1+y2),x2,y2); // draw fence
       
     }
   }
