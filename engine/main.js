@@ -222,7 +222,7 @@ function startscreen() {
 }
 
 function roadgen() {
-  curve+=xcurve;
+  xcurve+=curve;
   
   if (curvedir === 1) {
     curve+=(curvegoal/Math.abs(curvegoal))/2;
@@ -232,10 +232,12 @@ function roadgen() {
     if (curvegoal > 0 && curve < 0) {
       curvegoal = -20;
       curve = 0
+      curvedir = 1;
     }
     if (curvegoal < 0 && curve > 0) {
       curvegoal = 20;
-      curve = 0
+      curve = 0;
+      curvedir = 1;
     }
   }
   
