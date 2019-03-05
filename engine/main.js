@@ -12,6 +12,11 @@ c.width  = window.innerWidth;
 c.height = window.innerHeight;
 ctx.imageSmoothingEnabled = false;
 
+var curve = 0;
+var xcurve = 0;
+var curvegoal = 20;
+var curvedir = 1;
+
 // Keys detector
 var keys = {};
 window.onkeyup = function(e) { keys[e.keyCode] = false; }
@@ -165,8 +170,8 @@ function deleteouts() {
       roadx.splice(i,1);
       roady.splice(i,1);
       roadz.push(roadz[roadz.length-1]+10);
-      roady.push(150*Math.sin(Math.PI/180*(((roadz[roadz.length-1]/10)*360)/31)));
-      roadx.push(250*Math.sin(Math.PI/180*(((roadz[roadz.length-1]/10)*360)/31)));
+      roady.push(0);
+      roadx.push(xcurve);
       i-=1;
     }
   }
@@ -216,11 +221,32 @@ function startscreen() {
   } catch {}
 }
 
+function roadgen() {
+  curve+=xcurve;
+  
+  if (curvedir === 1) {
+    curve+=(curvegoal/Math.abs(curvegoal))/2;
+    if (Math.abs(curve) > Math.abs(curvegoal)) {curvedir=0}
+  } else {
+    curve-=(curvegoal/Math.abs(curvegoal))/2
+    if (curvegoal > 0 && curve < 0) {
+      curvegoal = -20;
+      curve = 0
+    }
+    if (curvegoal < 0 && curve > 0) {
+      curvegoal = 20;
+      curve = 0
+    }
+  }
+  
+}
+
 function step() {
   ctx.clearRect(0, 0, c.width, c.height);
   mz += 2;
   // Render
   //startscreen();
+  roadgen();
   deleteouts();
   playg();
   controls();
