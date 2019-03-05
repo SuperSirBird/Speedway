@@ -122,14 +122,14 @@ function playg() {
       
       // fence
       
-      perspec(roadx[i]-620-mx,roady[i]-200-my,roadz[i]-mz);
+      perspec(roadx[i]-620-mx,roady[i]-200-my+40,roadz[i]-mz);
       var x1 = x;
       var y1 = y;
-      perspec(70,80,roadz[i]-mz);
+      perspec(80,70,roadz[i]-mz);
       var x2 = x;
       var y2 = y;
       
-      var img = document.getElementById("car");
+      var img = document.getElementById("fance");
       ctx.drawImage(img, gx(x1-(x2/2)), gx(y1+y2),x2,y2); // draw fence
       
     }
