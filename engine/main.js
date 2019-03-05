@@ -14,7 +14,7 @@ ctx.imageSmoothingEnabled = false;
 
 var curve = 0;
 var xcurve = 0;
-var curvegoal = 20;
+var curvegoal = 100;
 var curvedir = 1;
 
 // Keys detector
@@ -225,17 +225,17 @@ function roadgen() {
   xcurve+=curve;
   
   if (curvedir === 1) {
-    curve+=(curvegoal/Math.abs(curvegoal))/2;
+    curve+=(curvegoal/Math.abs(curvegoal))/3;
     if (Math.abs(curve) > Math.abs(curvegoal)) {curvedir=0}
   } else {
-    curve-=(curvegoal/Math.abs(curvegoal))/2
+    curve-=(curvegoal/Math.abs(curvegoal))/3;
     if (curvegoal > 0 && curve < 0) {
-      curvegoal = -20;
+      curvegoal = -100;
       curve = 0
       curvedir = 1;
     }
     if (curvegoal < 0 && curve > 0) {
-      curvegoal = 20;
+      curvegoal = 100;
       curve = 0;
       curvedir = 1;
     }
