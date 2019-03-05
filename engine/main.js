@@ -29,7 +29,7 @@ var roady = [0]
 var roadz = [0]
 var ycar = 0;
 
-for (var i = 10;i<510;i+=10) {
+for (var i = 10;i<680;i+=10) {
   roadx.push(0);
   roady.push(0);
   roadz.push(10+roadz[(i-10)/10])
@@ -226,8 +226,8 @@ function startscreen() {
 function roadgen() {
   cooldown+=1;
   cooldown2+=1;
-  if (cooldown2 < 150) {xcurve+=curve;}
-  if (cooldown > 500 && cooldown2 > 150) {
+  if (cooldown2 < 100) {xcurve+=curve;}
+  if (cooldown > 500 && cooldown2 > 100) {
     xcurve+=curve;
   
     if (curvedir === 1) {
