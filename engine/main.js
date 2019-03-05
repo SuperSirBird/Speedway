@@ -17,6 +17,7 @@ var xcurve = 0;
 var curvegoal = 25;
 var curvedir = 1;
 var cooldown = 40;
+var cooldown2 = 100;
 
 // Keys detector
 var keys = {};
@@ -224,12 +225,14 @@ function startscreen() {
 
 function roadgen() {
   cooldown+=1;
-  if (cooldown > 200) {
+  cooldown2+=1;
+  if (cooldown2 < 100) {xcurve+=curve;}
+  if (cooldown > 200 && cooldown2 > 100) {
     xcurve+=curve;
   
     if (curvedir === 1) {
       curve+=(curvegoal/Math.abs(curvegoal))/20;
-      if (Math.abs(curve) > Math.abs(curvegoal)) {curvedir=0; cooldown=150}
+      if (Math.abs(curve) > Math.abs(curvegoal)) {curvedir=0; cooldown2=0}
     } else {
       curve-=(curvegoal/Math.abs(curvegoal))/35;
       if (curvegoal > 0 && curve < 0) {
