@@ -226,23 +226,22 @@ function startscreen() {
 function roadgen() {
   cooldown+=1;
   cooldown2+=1;
-  if (cooldown2 < 100) {xcurve+=curve;}
-  if (cooldown > 500 && cooldown2 > 100) {
+  if (cooldown2 < 150) {xcurve+=curve;}
+  if (cooldown > 500 && cooldown2 > 150) {
     xcurve+=curve;
   
     if (curvedir === 1) {
-      curve+=(curvegoal/Math.abs(curvegoal))/20;
+      curve+=(curvegoal/Math.abs(curvegoal))/15;
       if (Math.abs(curve) > Math.abs(curvegoal)) {curvedir=0; cooldown2=0}
     } else {
-      //curve-=(curvegoal/Math.abs(curvegoal))/45;
-      curve = curve/1.1
-      if (curvegoal > 0 && curve < 1) {
+      curve-=(curvegoal/Math.abs(curvegoal))/15;
+      if (curvegoal > 0 && curve < 0) {
         cooldown=0;
         curvegoal = -25;
         curve = 0
         curvedir = 1;
       }
-      if (curvegoal < 0 && curve > -1) {
+      if (curvegoal < 0 && curve > 0) {
         cooldown=0;
         curvegoal = 25;
         curve = 0;
