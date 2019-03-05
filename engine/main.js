@@ -133,7 +133,7 @@ function playg() {
       var x3 = x;
       
       var img = document.getElementById("fence");
-      ctx.drawImage(img, gx(x1), gy(y1+y2),((gx(x3)-gx(x1))/70)*71,y2); // draw fence
+      ctx.drawImage(img, gx(x1), gy(y1+y2),((gx(x3)-gx(x1))/70)*78,y2); // draw fence
       
       // fence left
       
@@ -148,8 +148,8 @@ function playg() {
       var x3 = x;
       
       var img = document.getElementById("fence");
-      ctx.drawImage(img, gx(x1), gy(y1+y2),((gx(x3)-gx(x1))/70)*71,y2); // draw fence
-      
+      ctx.drawImage(img, gx(x1), gy(y1+y2),((gx(x3)-gx(x1))/70)*78,y2); // draw fence
+ 
     }
   }
   } catch(err) {alert(err)}
