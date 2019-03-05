@@ -129,7 +129,7 @@ function playg() {
       var x2 = x;
       var y2 = y;
       
-      perspec(roadx[i]+700-mx,roady[i]-200-my,roadz[i]-mz+10);
+      perspec(roadx[i-1]+700-mx,roady[i-1]-200-my,roadz[i]-mz-10);
       var x3 = x;
       
       var img = document.getElementById("fence");
