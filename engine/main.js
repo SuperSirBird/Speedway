@@ -45,10 +45,10 @@ var xspeed = 0;
 function controls() {
   xspeed = xspeed/1.1;
   if (keys[39]) { //right
-    xspeed += 2;
+    xspeed += 4;
   } 
   if (keys[37]) { //left
-    xspeed += -2;
+    xspeed += -4;
   } 
   mx += xspeed
 }
@@ -231,10 +231,10 @@ function roadgen() {
     xcurve+=curve;
   
     if (curvedir === 1) {
-      curve+=(curvegoal/Math.abs(curvegoal))/15;
+      curve+=(curvegoal/Math.abs(curvegoal))/10;
       if (Math.abs(curve) > Math.abs(curvegoal)) {curvedir=0; cooldown2=0}
     } else {
-      curve-=(curvegoal/Math.abs(curvegoal))/15;
+      curve-=(curvegoal/Math.abs(curvegoal))/10;
       if (curvegoal > 0 && curve < 0) {
         cooldown=0;
         curvegoal = -25;
@@ -254,7 +254,7 @@ function roadgen() {
 
 function step() {
   ctx.clearRect(0, 0, c.width, c.height);
-  mz += 2;
+  mz += 4;
   // Render
   //startscreen();
   roadgen();
