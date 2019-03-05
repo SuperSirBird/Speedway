@@ -229,7 +229,7 @@ function roadgen() {
   
     if (curvedir === 1) {
       curve+=(curvegoal/Math.abs(curvegoal))/20;
-      if (Math.abs(curve) > Math.abs(curvegoal)) {curvedir=0}
+      if (Math.abs(curve) > Math.abs(curvegoal)) {curvedir=0; cooldown=150}
     } else {
       curve-=(curvegoal/Math.abs(curvegoal))/35;
       if (curvegoal > 0 && curve < 0) {
