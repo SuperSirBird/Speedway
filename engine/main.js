@@ -120,7 +120,7 @@ function playg() {
       
       ctx.fillRect(gx(lx1),gy(ly1),rx1-lx1,ly1-ly2);
       
-      // fence
+      // fence right
       
       perspec(roadx[i]+700-mx,roady[i]-200-my,roadz[i]-mz);
       var x1 = x;
@@ -130,6 +130,21 @@ function playg() {
       var y2 = y;
       
       perspec(roadx[i-1]+700-mx,roady[i-1]-200-my,roadz[i]-mz-10);
+      var x3 = x;
+      
+      var img = document.getElementById("fence");
+      ctx.drawImage(img, gx(x1), gy(y1+y2),(gx(x3)-gx(x1)),y2); // draw fence
+      
+      // fence left
+      
+      perspec(roadx[i]-700-mx,roady[i]-200-my,roadz[i]-mz);
+      var x1 = x;
+      var y1 = y;
+      perspec(130,100,roadz[i]-mz);
+      var x2 = x;
+      var y2 = y;
+      
+      perspec(roadx[i-1]-700-mx,roady[i-1]-200-my,roadz[i]-mz-10);
       var x3 = x;
       
       var img = document.getElementById("fence");
