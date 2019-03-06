@@ -161,14 +161,14 @@ function playg() {
       if (roadz[i] % 30 === 0) {
       // column right
       
-      perspec(roadx[i]+1000-mx,roady[i]-200-my,roadz[i]-mz);
+      perspec(roadx[i]+1300-mx,roady[i]-200-my,roadz[i]-mz);
       var x1 = x;
       var y1 = y;
-      perspec(230,350,roadz[i]-mz);
+      perspec(280,450,roadz[i]-mz);
       var x2 = x;
       var y2 = y;
       
-      perspec(roadx[i-1]+1000-mx,roady[i-1]-200-my,roadz[i]-mz-10);
+      perspec(roadx[i-1]+1300-mx,roady[i-1]-200-my,roadz[i]-mz-10);
       var x3 = x;
       
       var img = document.getElementById("column");
@@ -176,14 +176,14 @@ function playg() {
       
       // column left
       
-      perspec(roadx[i]-1000-mx,roady[i]-200-my,roadz[i]-mz);
+      perspec(roadx[i]-1300-mx,roady[i]-200-my,roadz[i]-mz);
       var x1 = x;
       var y1 = y;
-      perspec(230,350,roadz[i]-mz);
+      perspec(280,450,roadz[i]-mz);
       var x2 = x;
       var y2 = y;
       
-      perspec(roadx[i-1]-1000-mx,roady[i-1]-200-my,roadz[i]-mz-10);
+      perspec(roadx[i-1]-1300-mx,roady[i-1]-200-my,roadz[i]-mz-10);
       var x3 = x;
       
       var img = document.getElementById("column");
