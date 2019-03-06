@@ -105,7 +105,6 @@ function texturecell(x_,w,i_) {
       var rx2 = x;
       var ry2 = y;
       // draw
-      ctx.fillStyle = '#ffffff';
       ctx.fillRect(gx(lx1),gy(ly1),rx1-lx1,ly1-ly2);
   } catch(err) {alert(err)}
 }
@@ -149,11 +148,12 @@ function playg() {
       ctx.fillStyle = '#5b5b5b';
       ctx.fillRect(gx(lx1),gy(ly1),rx1-lx1,ly1-ly2);
       
-      ctx.fillStyle = '#ffffff';
+      // road texture
+      if (roadz[i] % 40 < 11) {
+      ctx.fillStyle = '#ffffff';} else {ctx.fillStyle = '#e84c3e';}
       
-      for (var c = 0;c<1200;c+=20) {
-        texturecell(-600+c,20,i);
-      }
+      texturecell(-600,20,i);
+      texturecell(600-20,20,i);
       
       // fence right
       
