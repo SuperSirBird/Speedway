@@ -29,7 +29,7 @@ var roady = [0]
 var roadz = [0]
 var ycar = 0;
 
-for (var i = 10;i<980;i+=10) {
+for (var i = 10;i<9800;i+=10) {
   roadx.push(0);
   roady.push(0);
   roadz.push(10+roadz[(i-10)/10])
