@@ -145,7 +145,7 @@ function playg() {
       ctx.fillStyle = '#5b5b5b';
       ctx.fillRect(gx(lx1),gy(ly1),rx1-lx1,ly1-ly2);
       
-      ctx.fillStyle = '#5b5b5b';
+      ctx.fillStyle = '#ffffff';
       
       for (var c = 0;c<1200;c+=20) {
         texturecell(-600+c,20,i);
