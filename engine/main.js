@@ -158,7 +158,7 @@ function playg() {
       ctx.drawImage(img, gx(x1), gy(y1+y2),((gx(x3)-gx(x1))/70)*78,y2); // draw fence
       
       // column
-      if (roadz[i] % 30 === 0) {
+      if (roadz[i] % 100 === 0) {
       // column right
       
       perspec(roadx[i]+1300-mx,roady[i]-200-my,roadz[i]-mz);
