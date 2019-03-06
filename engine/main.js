@@ -29,7 +29,7 @@ var roady = [0]
 var roadz = [0]
 var ycar = 0;
 
-for (var i = 10;i<9800;i+=10) {
+for (var i = 10;i<980;i+=10) {
   roadx.push(0);
   roady.push(0);
   roadz.push(10+roadz[(i-10)/10])
@@ -41,6 +41,7 @@ var mz = 0;
 var mx = 0;
 var my = 0;
 var xspeed = 0;
+var i;
 
 function controls() {
   xspeed = xspeed/1.1;
@@ -87,6 +88,23 @@ function drawcar() {
   
 }
 
+function texturecell(x,w) {
+  perspec(roadx[i]+x-mx,roady[i]-200-my,roadz[i]-mz);
+  var lx1 = x;
+  var ly1 = y;
+  perspec(roadx[i-1]+x-mx,roady[i-1]-200-my,roadz[i-1]-mz);
+  var lx2 = x;
+  var ly2 = y;
+  // right road
+  perspec(roadx[i]-mx+x+w,roady[i]-200-my,roadz[i]-mz);
+  var rx1 = x;
+  var ry1 = y;
+  perspec(roadx[i-1]-mx+x+w,roady[i-1]-200-my,roadz[i-1]-mz);
+  var rx2 = x;
+  var ry2 = y;
+  ctx.fillRect(gx(lx1),gy(ly1),rx1-lx1,ly1-ly2);
+}
+
 function playg() {
   var d = new Date();
   var n = d.getTime();
@@ -124,8 +142,11 @@ function playg() {
       var ry2 = y;
       // draw
       ctx.fillStyle = '#5b5b5b';
-      
       ctx.fillRect(gx(lx1),gy(ly1),rx1-lx1,ly1-ly2);
+      
+      ctx.fillStyle = '#5b5b5b';
+      for (var c = 0)
+      texturecell(-600+c,20)
       
       // fence right
       
