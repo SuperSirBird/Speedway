@@ -174,7 +174,7 @@ function playg() {
       
       // intercept:
       if (roadz[i]-mz < 30 && roadz[i]-mz > 10) {
-      if (mx+70>roadx[i]+700) {xspeed=0;mx=roadx[i]+700-71}}
+      if (mx+70>roadx[i]+700) {xspeed=-15;mx=roadx[i]+700-71}}
       
       // fence left
       
@@ -193,7 +193,7 @@ function playg() {
       
       // intercept:
       if (roadz[i]-mz < 30 && roadz[i]-mz > 10) {
-      if (mx-70<roadx[i]-700) {xspeed=0;mx=roadx[i]-700+71}}
+      if (mx-70<roadx[i]-700) {xspeed=15;mx=roadx[i]-700+71}}
       
       // column
       if (roadz[i] % 100 === 0) {
