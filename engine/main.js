@@ -155,6 +155,8 @@ function playg() {
       texturecell(-600,20,i);
       texturecell(600-20,20,i);
       
+      if (roadz[i] % 40 < 11) { ctx.fillStyle = '#ffffff'; texturecell(-10,20,i);}
+      
       // fence right
       
       perspec(roadx[i]+700-mx,roady[i]-200-my,roadz[i]-mz);
