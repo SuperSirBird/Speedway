@@ -164,7 +164,7 @@ function playg() {
       perspec(roadx[i]+1300-mx,roady[i]-200-my,roadz[i]-mz);
       var x1 = x;
       var y1 = y;
-      perspec(280,450,roadz[i]-mz);
+      perspec(280,550,roadz[i]-mz);
       var x2 = x;
       var y2 = y;
       
@@ -179,7 +179,7 @@ function playg() {
       perspec(roadx[i]-1300-mx,roady[i]-200-my,roadz[i]-mz);
       var x1 = x;
       var y1 = y;
-      perspec(280,450,roadz[i]-mz);
+      perspec(280,550,roadz[i]-mz);
       var x2 = x;
       var y2 = y;
       
