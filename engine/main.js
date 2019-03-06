@@ -155,7 +155,7 @@ function playg() {
       texturecell(-600,20,i);
       texturecell(600-20,20,i);
       
-      if (roadz[i] % 40 < 11) { ctx.fillStyle = '#ffffff'; texturecell(-10,20,i);}
+      if (roadz[i] % 80 < 31) { ctx.fillStyle = '#ffffff'; texturecell(-10,20,i);}
       
       // fence right
       
