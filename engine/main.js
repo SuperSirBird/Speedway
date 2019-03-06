@@ -158,16 +158,17 @@ function playg() {
       ctx.drawImage(img, gx(x1), gy(y1+y2),((gx(x3)-gx(x1))/70)*78,y2); // draw fence
       
       // column
+      if (roadz[i] % 30 === 0) {
       // column right
       
-      perspec(roadx[i]+800-mx,roady[i]-200-my,roadz[i]-mz);
+      perspec(roadx[i]+1000-mx,roady[i]-200-my,roadz[i]-mz);
       var x1 = x;
       var y1 = y;
       perspec(230,350,roadz[i]-mz);
       var x2 = x;
       var y2 = y;
       
-      perspec(roadx[i-1]+800-mx,roady[i-1]-200-my,roadz[i]-mz-10);
+      perspec(roadx[i-1]+1000-mx,roady[i-1]-200-my,roadz[i]-mz-10);
       var x3 = x;
       
       var img = document.getElementById("column");
@@ -175,18 +176,19 @@ function playg() {
       
       // column left
       
-      perspec(roadx[i]-800-mx,roady[i]-200-my,roadz[i]-mz);
+      perspec(roadx[i]-1000-mx,roady[i]-200-my,roadz[i]-mz);
       var x1 = x;
       var y1 = y;
       perspec(230,350,roadz[i]-mz);
       var x2 = x;
       var y2 = y;
       
-      perspec(roadx[i-1]-800-mx,roady[i-1]-200-my,roadz[i]-mz-10);
+      perspec(roadx[i-1]-1000-mx,roady[i-1]-200-my,roadz[i]-mz-10);
       var x3 = x;
       
       var img = document.getElementById("column");
       ctx.drawImage(img, gx(x1-(x2/2)), gy(y1+y2),x2,y2); // draw column
+      }
  
     }
   }
