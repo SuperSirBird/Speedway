@@ -88,20 +88,20 @@ function drawcar() {
   
 }
 
-function texturecell(x,w,i_) {
+function texturecell(x_,w,i_) {
   try {
     // left road
-      perspec(roadx[i_]+x-mx,roady[i_]-200-my,roadz[i_]-mz);
+      perspec(roadx[i_]+x_-mx,roady[i_]-200-my,roadz[i_]-mz);
       var lx1 = x;
       var ly1 = y;
-      perspec(roadx[i_-1]+x-mx,roady[i_-1]-200-my,roadz[i_-1]-mz);
+      perspec(roadx[i_-1]+x_-mx,roady[i_-1]-200-my,roadz[i_-1]-mz);
       var lx2 = x;
       var ly2 = y;
       // right road
-      perspec(roadx[i_]+x+w-mx,roady[i_]-200-my,roadz[i_]-mz);
+      perspec(roadx[i_]+x_+w-mx,roady[i_]-200-my,roadz[i_]-mz);
       var rx1 = x;
       var ry1 = y;
-      perspec(roadx[i_-1]+x+w-mx,roady[i_-1]-200-my,roadz[i_-1]-mz);
+      perspec(roadx[i_-1]+x_+w-mx,roady[i_-1]-200-my,roadz[i_-1]-mz);
       var rx2 = x;
       var ry2 = y;
       // draw
