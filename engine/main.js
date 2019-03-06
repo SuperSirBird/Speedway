@@ -161,7 +161,7 @@ function playg() {
       ctx.drawImage(img, gx(x1), gy(y1+y2),((gx(x3)-gx(x1))/70)*78,y2); // draw fence
       
       // intercept:
-      if (mx-70<roadx[i]+700) {xspeed=8;mx=roadx[i]-700+70}
+      if (mx-70<roadx[i]-700) {xspeed=8;mx=roadx[i]-700+70}
       
       // column
       if (roadz[i] % 100 === 0) {
