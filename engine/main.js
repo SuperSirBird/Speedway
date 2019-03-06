@@ -88,21 +88,22 @@ function drawcar() {
   
 }
 
-function texturecell(x,w) {
-  perspec(roadx[i]+x-mx,roady[i]-200-my,roadz[i]-mz);
+function texturecell(x,w,i_) {
+  try {
+  perspec(roadx[i_]+x-mx,roady[i_]-200-my,roadz[i_]-mz);
   var lx1 = x;
   var ly1 = y;
-  perspec(roadx[i-1]+x-mx,roady[i-1]-200-my,roadz[i-1]-mz);
+  perspec(roadx[i_-1]+x-mx,roady[i_-1]-200-my,roadz[i_-1]-mz);
   var lx2 = x;
   var ly2 = y;
   // right road
-  perspec(roadx[i]-mx+x+w,roady[i]-200-my,roadz[i]-mz);
+  perspec(roadx[i_]-mx+x+w,roady[i_]-200-my,roadz[i_]-mz);
   var rx1 = x;
   var ry1 = y;
-  perspec(roadx[i-1]-mx+x+w,roady[i-1]-200-my,roadz[i-1]-mz);
+  perspec(roadx[i_-1]-mx+x+w,roady[i_-1]-200-my,roadz[i_-1]-mz);
   var rx2 = x;
   var ry2 = y;
-  ctx.fillRect(gx(lx1),gy(ly1),rx1-lx1,ly1-ly2);
+  ctx.fillRect(gx(lx1),gy(ly1),rx1-lx1,ly1-ly2);} catch(err) {alert(err)}
 }
 
 function playg() {
@@ -145,8 +146,10 @@ function playg() {
       ctx.fillRect(gx(lx1),gy(ly1),rx1-lx1,ly1-ly2);
       
       ctx.fillStyle = '#5b5b5b';
-      for (var c = 0)
-      texturecell(-600+c,20)
+      
+      for (var c = 0;c<1200;c+=20) {
+        texturecell(-600+c,20,i);
+      }
       
       // fence right
       
